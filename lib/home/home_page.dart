@@ -38,17 +38,16 @@ class _HomeViewState extends State<HomeView> {
         child: BlocBuilder<WeatherCubit, WeatherState>(
           builder: (context, state) {
             if (state is WeatherInitial) {
-              return Text('WeatherInitial');
+              return Text('WeatherInitial......');
             } else if (state is WeatherLoading) {
-              return Text('WeatherLoading');
+              return Text('WeatherLoading......');
             } else if (state is WeatherSuccess) {
               return Text(state.weatherResponse.name);
             } else if (state is WeatherError) {
               return Text(state.errorText);
             } else {
-              return const Text('NOT');
+              return const Text('NOT....');
             }
-            return Text('text');
           },
         ),
       ),

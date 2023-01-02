@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 class Main {
   Main(
       {required this.temp,

@@ -2,7 +2,6 @@ import 'package:bloc_weatherapp/models/weather_response.dart';
 import 'package:bloc_weatherapp/services/fetch_weather.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 part 'weather_state.dart';
 
 class WeatherCubit extends Cubit<WeatherState> {
@@ -16,7 +15,7 @@ class WeatherCubit extends Cubit<WeatherState> {
     if (data != null) {
       emit(WeatherSuccess(data));
     } else {
-      emit(WeatherError('Error TWo'));
+      emit(const WeatherError('Error Two'));
     }
   }
 }
